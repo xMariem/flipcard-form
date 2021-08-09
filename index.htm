@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>flip card</title>
+</head>
+<body>
+    <div class="flipcard">
+        <div class="container" id="card">
+            <div class="login card">
+                <h1>LOGIN</h1>
+                <form action="">
+                <input type="text" name="username" placeholder="type your username">
+                <input type="password" name="password" id="password" placeholder="type your password">
+                <input type="submit" value="sign in">
+                <input type="checkbox" name="remember" id="remember"><label for="remember">remember me</label>
+                </form>
+
+                <input type="button" value="im new here" onclick="openRegistration()">
+                <a href="#">forgot password?</a>
+            </div>
+            <div class="registration card">
+                <h1>REGISTER</h1>
+                <form action="">
+                <input type="text" name="username" placeholder="type your username">
+                <input type="email" name="mail" id="mail" placeholder="type your email">
+                <input type="password" name="password" id="password" placeholder="type your password">
+                <input type="submit" value="sign up">
+                <input type="checkbox" name="remember" id="remember"><label for="remember">remember me</label>
+                </form>
+
+                <input type="button" value="already have an account?" onclick="openLogin()" >
+                <a href="#">forgot password?</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    var card = document.getElementById("card");
+
+    function openRegistration()
+    {
+        card.style.transform = "rotateY(-180deg)"
+    }
+
+    function openLogin()
+    {
+        card.style.transform = "rotateY(0)"
+    }
+</script>
+</html>
